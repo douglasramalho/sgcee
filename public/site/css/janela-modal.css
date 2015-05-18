@@ -1,0 +1,347 @@
+/* JANELA MODAL PARA CADASTRO DE PRODUTOS NO PERFIL DE CONSUMO */
+
+/* O z-index do div#mask deve ser menor que do div#boxes e do div.window */
+#mask {
+    position:absolute;
+    z-index:9000;  
+    background-color:#000; 
+    display:none;
+}
+
+#modal-box-produto .window {
+    position:absolute;
+    width:490px;
+    height:350px;
+    display:none;
+    z-index:9999;
+    padding:20px;
+    background-color: #fff;
+    border: 5px solid #67b168;
+    
+}
+
+
+#modal-box-produto #dialog-produto {
+    width:425px;
+    height:353px;    
+}
+
+#modal-box-produto #dialog-produto a{
+    text-decoration: none;
+    color: #ac2925;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+}
+
+#modal-box-produto #dialog-produto h3{
+    text-align: center;
+    margin: 0;
+    padding: 0;    
+}
+
+/* MODAL DO CADASTRO DE PRODUTO NO PERFIL */
+
+#modal-box-produto #dialog-produto .modal-produto{
+    width: 100%;
+    float: left;
+}
+
+#modal-box-produto #dialog-produto .modal-produto .modal-img-produto{
+    width: 200px;
+    height: 180px;
+    float: left;
+}
+
+#modal-box-produto #dialog-produto .modal-produto .modal-img-produto img{
+    width: 200px;
+    height: 180px;
+}
+
+#modal-box-produto #dialog-produto .modal-produto .modal-info-produto{
+    width: 180px;    
+    float: left;    
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+#modal-box-produto #dialog-produto .modal-produto .modal-info-produto p{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#modal-box-produto #dialog-produto .modal-produto .modal-info-produto ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#modal-box-produto #dialog-produto .modal-produto .modal-info-produto ul li{
+    font-size: 13px;
+    line-height: 20px;
+}
+
+#modal-box-produto #dialog-produto .modal-form-cadastro-produto{
+    width: 100%;
+    float: left;
+}
+
+#modal-box-produto #dialog-produto form select{
+    width: 90px;
+    height: 30px;
+    font-size: 13px;
+}
+
+#modal-box-produto #dialog-produto form input[type="text"]{
+    height: 20px;
+    padding: 3px;
+    margin: 5px;
+    font-size: 13px;
+}
+
+#modal-box-produto #dialog-produto form .row{
+    width: 400px;
+    display: block;
+    float: left;
+    margin-bottom: 10px;    
+}
+
+#modal-box-produto #dialog-produto form .row .col{
+    float: left;    
+}
+
+#modal-box-produto #dialog-produto form .row .col label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+    margin: 5px;
+}
+
+#modal-box-produto #dialog-produto form .margem-direita10{
+    margin-right: 10px;
+}
+
+#modal-box-produto #dialog-produto form .align-center{
+    text-align: center;
+}
+
+#modal-box-produto #dialog-produto form .tam50{
+    width: 50px;
+}
+
+#modal-box-produto #dialog-produto form .tam80{
+    width: 80px;
+}
+
+#modal-box-produto #dialog-produto form button[class="cancel"]{
+    width: 150px;
+}
+
+#modal-box-produto #dialog-produto form input[type="submit"]{
+    width: 150px;    
+    height: 35px;
+    background-color: #3EA868;
+    color: #fff;
+    border: 0;
+}
+
+/* MODAL DO CADASTRO DE META DE CONSUMO */
+
+#modal-box-meta .window {
+    position:absolute;
+    width:375px;
+    height:150px;
+    display:none;
+    z-index:9999;
+    padding:20px;
+    background-color: #fff;
+    border: 5px solid #67b168;
+    
+}
+
+
+#modal-box-meta #dialog-meta {
+    width:310px;
+    height:153px;    
+}
+
+#modal-box-meta #dialog-meta a{
+    text-decoration: none;
+    color: #ac2925;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+}
+
+#modal-box-meta #dialog-meta h3{
+    text-align: center;
+    margin: 0;
+    padding: 0;    
+}
+
+#modal-box-meta #dialog-meta .modal-meta{
+    width: 100%;
+    float: left;
+}
+
+#modal-box-meta #dialog-meta form select{
+    width: 90px;
+    height: 30px;
+    font-size: 13px;
+}
+
+#modal-box-meta #dialog-meta form input[type="text"]{
+    height: 20px;
+    padding: 3px;
+    margin: 5px;
+    font-size: 13px;
+}
+
+#modal-box-meta #dialog-meta form .row{
+    width: 400px;
+    display: block;
+    float: left;
+    margin-bottom: 10px;    
+}
+
+#modal-box-meta #dialog-meta form .row .col{
+    float: left;    
+}
+
+#modal-box-meta #dialog-meta form .row .col label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+    margin: 5px;
+}
+
+#modal-box-meta #dialog-meta form .margem-direita10{
+    margin-right: 10px;
+}
+
+#modal-box-meta #dialog-meta form .align-center{
+    text-align: center;
+}
+
+#modal-box-meta #dialog-meta form .tam50{
+    width: 50px;
+}
+
+#modal-box-meta #dialog-meta form .tam80{
+    width: 80px;
+}
+
+#modal-box-meta #dialog-meta form button[class="cancel"]{
+    width: 150px;
+}
+
+#modal-box-meta #dialog-meta form input[type="submit"]{
+    width: 150px;    
+    height: 35px;
+    background-color: #3EA868;
+    color: #fff;
+    border: 0;
+}
+
+/* MODAL DO CADASTRO DE PERFIL DE CONSUMO */
+
+#modal-cadastro-perfil .window {
+    position:absolute;
+    width:405px;
+    height:350px;
+    display:none;
+    z-index:9999;
+    padding:20px;
+    background-color: #fff;
+    border: 5px solid #67b168;
+    
+}
+
+
+#modal-cadastro-perfil #dialog-cad-perfil {
+    width:340px;
+    height:353px;    
+}
+
+#modal-cadastro-perfil #dialog-cad-perfil a{
+    text-decoration: none;
+    color: #ac2925;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+}
+
+#modal-cadastro-perfil #dialog-cad-perfil h3{
+    text-align: center;
+    margin: 0;
+    padding: 0;    
+}
+
+#modal-cadastro-perfil #dialog-cad-perfil .modal-meta{
+    width: 100%;
+    float: left;
+}
+
+#modal-cadastro-perfil #dialog-cad-perfil form textarea{
+    width: 322px;
+    margin: 5px;
+    height: 100px;
+    font-size: 13px;
+}
+
+#modal-cadastro-perfil #dialog-cad-perfil form input[type="text"]{
+    height: 20px;
+    padding: 3px;
+    margin: 5px;
+    font-size: 13px;
+}
+
+#modal-cadastro-perfil #dialog-cad-perfil form .row{
+    width: 400px;
+    display: block;
+    float: left;
+    margin-bottom: 10px;    
+}
+
+#modal-cadastro-perfil #dialog-cad-perfil form .row .col{
+    float: left;    
+}
+
+#modal-cadastro-perfil #dialog-cad-perfil form .row .col label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+    margin: 5px;
+}
+
+#modal-cadastro-perfil #dialog-cad-perfil form .margem-direita10{
+    margin-right: 18px;
+}
+
+#modal-cadastro-perfil #dialog-cad-perfil form .align-center{
+    text-align: center;
+}
+
+#modal-cadastro-perfil #dialog-cad-perfil form .tam320{
+    width: 320px;
+}
+
+#modal-cadastro-perfil #dialog-cad-perfil form button[class="cancel"]{
+    width: 150px;
+    margin: 5px;
+}
+
+#modal-cadastro-perfil #dialog-cad-perfil form input[type="submit"]{
+    width: 150px;    
+    height: 35px;
+    background-color: #3EA868;
+    color: #fff;
+    border: 0;
+    margin: 5px;
+}
+
+/* posiciona o link para fechar a janela */
+.close {
+    display:block; 
+    text-align:right;
+}

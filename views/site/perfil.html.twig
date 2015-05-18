@@ -1,0 +1,68 @@
+{% extends "site/layoutLogado.html.twig" %}
+{% block content %}
+    <section class="container">
+
+        <div class="descricao-perfil">
+
+            <h3>Primeiro Andar</h3>
+            <p>Descrição: controle de consumo de energia do primeiro andar da casa da cidade.</p>
+            
+        </div>
+
+        <nav class="menu-perfil">
+
+            <ul>
+                <!-- #dialog é o id do DIV definido como mostrado a seguir  -->
+                <a href="#"><li>Meus produtos</li></a>
+                <a href="#"><li>Estimar consumo</li></a>
+                <a href="#dialog-meta" name="modal"><li>Meta de consumo</li></a>
+                <a href="/perfil-de-consumo"><li>Sair do perfil</li></a>
+
+            </ul>
+
+        </nav>
+
+        <div class="produtos-cadastrados">
+
+            <fieldset>
+                <legend>Produtos existentes</legend>
+        
+                {% if produtos == null %}
+                
+                    <p>Nenhum produto cadastrado</p>
+                    
+                {% else %}
+
+                    {% for produto in produtos %}
+
+                    <div class="box-produto margin-right-produto">
+
+                        <div class="img-produto">
+
+                            <img src="http://localhost:8888/imgs/produtos/ferro.jpg" alt="" />
+
+                        </div><!-- /.img-produto -->
+
+                        <div class="info-produto">
+
+                            <h3>{{ produto.descricao }}</h3>
+                            <p>Categoria</p>
+                            <p>{{produto.potenciaEmUso}}</p>
+
+                        </div><!-- /.info-produto -->
+
+                        <a href="#dialog-produto" name="modal"><button class="add">Incluir produto</button></a>
+
+
+                    </div><!-- /.box-produto -->
+
+                    {% endfor %}
+
+                {% endif %}
+
+            </fieldset>
+        </div>
+
+
+    </section>
+{% endblock %}

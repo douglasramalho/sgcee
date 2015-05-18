@@ -1,0 +1,54 @@
+{% extends "sistema/layout.html.twig" %}
+{% block content %}
+
+<section class="container">
+
+    <div class="box-autenticacao">
+
+        <h1>SGCEE</h1>
+        <h2>Sistema de Gestão de Consumo de Energia Elétrica</h2>
+        <hr>
+        <h2>Área Administrativa</h2>
+        
+        <form name="autenticacaoAdministrador" method="post" action="autenticarAdministrador">
+
+            <div class="form-login">
+                
+                <div class="row">
+                    <div class="col">
+                        <label>Nome de Usuário</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" name="usuario" value="">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label>Senha</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <input type="password" name="senha" value="">
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col">
+                        <input type="submit" name="autenticarAdministrador" value="Acessar" />
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+
+{% endblock %}

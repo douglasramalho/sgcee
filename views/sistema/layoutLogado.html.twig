@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="pt-br" > <![endif]-->
+<html class="no-js" lang="en" >
+
+    <head>
+        {% include "sistema/header.html.twig" %}
+    </head>
+
+    <body>
+
+        <div class="row">
+            <div class="small-4 columns">
+
+                <div class="logo">
+                    <h1>SGCEE</h1>
+                    <p>Sistema de Gestão de Consumo de Energia Elétrica</p>
+                </div>
+
+            </div>
+
+            <div class="small-8 columns">
+
+                <h2>PAINEL DE ADMINISTRAÇÃO</h2>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="small-2 columns">
+
+                <div class="icon-bar vertical five-up">
+                    <a class="icon-inicio" href="http://localhost:8888/sistema/principal">
+                        <label>Início</label>
+                    </a>
+                    <a class="icon-categoria-cad" href="http://localhost:8888/sistema/categorias">
+                        <label>Categorias</label>
+                    </a>
+                    <a class="icon-produtos" href="http://localhost:8888/sistema/produtos">
+                        <label>Produtos</label>
+                    </a>
+                    <a class="icon-estatsticas">
+                        <label>Relatórios</label>
+                    </a>
+                    <a class="icon-info">
+                        <label>Sobre</label>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="small-10 columns">
+
+                {% block content %}{% endblock %}
+
+            </div>
+        </div>
+
+        <script src="http://localhost:8888/sys/js/vendor/jquery.js"></script>
+        <script src="http://localhost:8888/sys/js/foundation.min.js"></script>
+        <script>
+            $(document).foundation();
+        </script>
+
+    </body>
+</html>

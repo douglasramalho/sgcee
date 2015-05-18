@@ -1,0 +1,40 @@
+{% extends "sistema/layoutLogado.html.twig" %}
+{% block content %}
+    <section class="container">
+
+		<div class="cadastros">
+			<div class="header">
+				<h3>Cadastro de Categorias</h3>
+			</div>
+
+			<div class="conteudo">
+
+				<form name="cadastro-categoria" method="post" action="/sistema/cadastrarCategoria">
+
+					<div class="row">
+						<div class="large-12 columns">
+							<label>Nome
+								<input type="text" name="nome" placeholder="nome da categoria" required />
+							</label>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="large-12 columns">
+							<label>Descrição
+								<textarea name="descricao" placeholder="descrição da categoria" required ></textarea>
+							</label>
+						</div>
+					</div>
+
+					<input type="submit" class="button success" value="Cadastrar" />
+					<a href="#" class="button alert">Cancelar</a>
+
+				</form>
+
+			</div>
+
+		</div>
+
+    </section>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "sistema/layoutLogado.html.twig" %}
+{% block content %}
+    <section class="container">
+
+		<div class="cadastros">
+			<div class="header">
+				<h3>Cadastro de Produtos</h3>
+			</div>
+
+			<div class="conteudo">
+
+				<p><a class="icon-novo" href="cadastro-produto">Novo Produto</a></p>
+
+				<table>
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Descrição</th>
+							<th>Categoria</th>
+							<th>Voltagem (V)</th>
+							<th>Potência em uso</th>
+							<th>Potência em standby</th>
+							<th>Ações</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for produto in produtos %}
+						<tr>
+							<th>{{ produto.id }}</th>
+							<th>{{ produto.descricao }}</th>
+							<th>{{ produto.idCategoria }}</th>
+							<th>{{ produto.voltagem }}</th>
+							<th>{{ produto.potenciaEmUso }}</th>
+							<th>{{ produto.potenciaEmStandBy }}</th>
+							<th><a href="produto/{{ produto.id }}">Editar</a> / <a href="excluirProduto">Excluir</a></th>
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+
+			</div>
+
+		</div>
+
+    </section>
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "sistema/layoutLogado.html.twig" %}
+{% block content %}
+    <section class="container">
+
+		<div class="cadastros">
+			<div class="header">
+				<h3>Cadastro de Produtos</h3>
+			</div>
+
+			<div class="conteudo">
+
+				<form name="cadastro-produto" method="post" action="http://localhost:8888/sistema/editarProduto">
+
+					<input type="hidden" name="id" value="{{ produto.id }}" />
+
+					<div class="row">
+						<div class="large-8 columns">
+							<label>Descrição
+								<input type="text" name="descricao" placeholder="descrição do produto" value="{{ produto.descricao }}" required />
+							</label>
+						</div>
+						<div class="large-4 columns">
+							<label>Categoria
+								<select name="categoria">
+									<option value="">Selecione</option>
+									{% for categoria in categorias %}
+									<option value="{{ categoria.id }}" {{ categoria.id == produto.idCategoria ? 'selected' : '' }}>{{ categoria.nome }}</option>
+									{% endfor %}
+								</select>
+							</label>
+						</div>
+					</div>
+
+					<div class="row">
+
+						<div class="large-4 columns">
+							<label>Voltagem (V)
+								<input type="number" name="voltagem" placeholder="informe a votagem do produto" value="{{ produto.voltagem }}" required />
+							</label>
+						</div>
+
+						<div class="large-4 columns">
+							<label>Potência em uso (W)
+								<input type="number" name="potenciaUso" placeholder="informe a potência do produto quando em uso" value="{{ produto.potenciaEmUso }}" required />
+							</label>
+						</div>
+
+						<div class="large-4 columns">
+							<label>Potência em standby (W)
+								<input type="number" name="potenciaStandBy" placeholder="informe a potência do produto quando em standby" value="{{ produto.potenciaEmStandBy }}" required />
+							</label>
+						</div>
+
+					</div>
+
+					<input type="submit" class="button success" value="Editar" />
+					<a href="#" class="button alert">Cancelar</a>
+
+				</form>
+
+			</div>
+
+		</div>
+
+    </section>
+{% endblock %}

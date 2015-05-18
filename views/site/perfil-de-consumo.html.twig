@@ -1,0 +1,46 @@
+{% extends "site/layoutLogado.html.twig" %}
+{% block content %}
+    <section class="container">
+
+        <div class="descricao-perfil">
+
+            <p>Seja bem vindo à sua área pessoal do SGCEE. Abaixo você tem acesso aos seus perfis de consumo. Caso ainda não tenha montado nenhum perfil de consumo, é hora de montá-lo agora mesmo e começar a economizar.</p>
+
+        </div>
+
+        <div class="add-perfil">
+
+            <p><a href="#dialog-cad-perfil" name="modal">+ Novo perfil de consumo</a> | Atualmente você possui 3 perfis de consumo cadastrados.</p>
+
+        </div>
+
+        <div class="perfil-consumo">
+
+            <fieldset>
+                <legend>Perfil(is) de Consumo Cadastrado(s)</legend>
+                {% for perfil in perfis %}
+                <div class="box-perfil margin-right-perfil">
+
+                    <div class="img-perfil">
+
+                        <img src="/site/imgs/assets/img-economia-home.jpg" alt="" />
+
+                    </div><!-- /.img-perfil -->
+
+                    <div class="info-perfil">
+
+                        <h3>{{perfil.nome}}</h3>
+                        <p>Qtd. Produtos: {{ totais.qtdProdutos }}</p>
+                        <p>Total KWh/mês: {{ totais.totalUsoMes }}</p>
+
+                    </div><!-- /.info-perfil -->
+
+                    <a href="/perfil/{{perfil.id}}"><button>Acessar perfil</button></a>
+
+                </div><!-- /.box-perfil -->
+                {% endfor %}
+            </fieldset>
+        </div>
+
+    </section>
+{% endblock %}

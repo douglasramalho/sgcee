@@ -1,0 +1,26 @@
+.container{
+    width: 100%;
+
+}
+
+.logo  h1{
+    color: #3EA868;
+}
+
+.cadastros{
+    width: 100%;
+    float: left;
+}
+
+.cadastros .header{
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid #000;
+}
+
+.cadastros .conteudo{
+    width: 100%;
+    float: left;
+    margin-top: 30px;
+    
+}
